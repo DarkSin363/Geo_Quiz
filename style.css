@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://darksin363.github.io/Geo_Quiz/images/IMG_3759.jpeg'); /* Укажите URL вашего изображения */
+    background: url('/images/IMG_3759.jpeg'); /* Укажите URL вашего изображения */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
