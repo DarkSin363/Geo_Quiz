@@ -21,8 +21,10 @@ body {
     margin-top: 150px; /* Смещаем контейнер вниз */
 }
 
-h1 {
-    color: #333;
+.loading-gif {
+    width: 100px; /* Настройте размер GIF */
+    height: 100px;
+    margin-bottom: 20px; /* Отступ от прогресс-бара */
 }
 
 .progress-bar {
