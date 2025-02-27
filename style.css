@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('/images/IMG_3759.jpeg'); /* Укажите URL вашего изображения */
+    background: #FF6E20 url('/images/IMG_3759.jpeg'); /* Укажите URL вашего изображения */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
