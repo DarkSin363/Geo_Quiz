@@ -13,6 +13,7 @@ body {
 }
 
 .container {
+    height: 150px;
     width: 200px; /* Фиксированная ширина */
     text-align: center;
     background-color: rgba(210, 180, 140, 0.8);
@@ -25,15 +26,15 @@ body {
 .loading-gif {
     width: 100px; /* Настройте размер GIF */
     height: 100px;
-    margin-bottom: 20px; /* Отступ от прогресс-бара */
+    margin-bottom: 30px; /* Отступ от прогресс-бара */
 }
 
 .progress-bar {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 20px 0;
+    width: 100%; /* Ширина прогресс-бара на 100% от родительского элемента */
+    background-color: #e0e0e0; /* Светло-серый цвет фона */
+    border-radius: 5px; /* Скругление углов на 5 пикселей */
+    overflow: hidden; /* Скрывает содержимое, выходящее за границы */
+    margin: 20px 0; /* Отступы сверху и снизу по 20px, слева и справа — 0 */
 }
 
 .progress {
