@@ -41,7 +41,7 @@ body {
     width: 0; /* Начальная ширина прогресса (0%) */
     height: 10px; /* Высота прогресса */
     background-color: #007bff; /* Синий цвет прогресса */
-    transition: width 0.3s ease; /* Плавное изменение ширины за 0.3 секунды */
+    transition: width 0.2s ease-in-out; /* Плавное изменение ширины за 0.3 секунды */
 }
 
 #status {
