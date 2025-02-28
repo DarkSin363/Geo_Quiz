@@ -1,32 +1,32 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: url('https://raw.githubusercontent.com/DarkSin363/Geo_Quiz/main/images/IMG_3759.jpeg'); /* Укажите URL вашего изображения */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    font-family: Arial, sans-serif; /* Устанавливаем шрифт для всей страницы */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    display: flex; /* Включаем flex-контейнер для выравнивания элементов */
+    justify-content: center; /* Выравниваем содержимое по центру по горизонтали */
+    align-items: center; /* Выравниваем содержимое по центру по вертикали */
+    height: 100vh; /* Высота body равна 100% высоты окна браузера */
+    background: url('https://raw.githubusercontent.com/DarkSin363/Geo_Quiz/main/images/IMG_3759.jpeg'); /* Фоновое изображение */
+    background-size: cover; /* Растягиваем изображение на весь экран */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Запрещаем повторение изображения */
 }
 
 .container {
-    height: 80px;
-    width: 200px; /* Фиксированная ширина */
-    text-align: center;
-    background-color: rgba(210, 180, 140, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 150px;
+    height: 80px; /* Фиксированная высота контейнера */
+    width: 200px; /* Фиксированная ширина контейнера */
+    text-align: center; /* Выравниваем текст по центру */
+    background-color: rgba(210, 180, 140, 0.8); /* Светло-коричневый цвет фона с прозрачностью 80% */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругление углов на 10 пикселей */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень контейнера */
+    margin-top: 150px; /* Внешний отступ сверху */
 }
 
 .loading-gif {
-    width: 100px; /* Настройте размер GIF */
-    height: 100px;
-    margin-bottom: 30px; /* Отступ от прогресс-бара */
+    width: 100px; /* Ширина GIF */
+    height: 100px; /* Высота GIF */
+    margin-bottom: 30px; /* Отступ снизу для GIF */
 }
 
 .progress-bar {
@@ -38,13 +38,13 @@ body {
 }
 
 .progress {
-    width: 0;
-    height: 10px;
-    background-color: #007bff;
-    transition: width 0.3s ease;
+    width: 0; /* Начальная ширина прогресса (0%) */
+    height: 10px; /* Высота прогресса */
+    background-color: #007bff; /* Синий цвет прогресса */
+    transition: width 0.3s ease; /* Плавное изменение ширины за 0.3 секунды */
 }
 
 #status {
-    color: #666;
-    font-size: 14px;
+    color: #666; /* Серый цвет текста */
+    font-size: 14px; /* Размер шрифта */
 }
