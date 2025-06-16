@@ -1,21 +1,13 @@
-<!DOCTYPE html> <!-- Объявление типа документа (HTML5) -->
-<html lang="ru"> <!-- Открывающий тег HTML с указанием языка (русский) -->
-<head> <!-- Начало раздела <head>, где хранится метаинформация -->
-    <meta charset="UTF-8"> <!-- Указывает кодировку документа (UTF-8) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Настройка области просмотра для мобильных устройств -->
-    <title>Загрузка</title> <!-- Заголовок страницы, отображается вкладке браузера -->
-    <link rel="stylesheet" href="style.css"> <!-- Подключение внешнего файла стилей -->
-</head> <!-- Конец раздела <head> -->
-<body> <!-- Начало раздела <body>, где находится основное содержимое страницы -->
-    <div class="container"> <!-- Контейнер для группировки элементов -->
-        <!-- Заменяем текст на GIF --> <!-- Комментарий для разработчика -->
-        <img src="https://raw.githubusercontent.com/DarkSin363/Geo_Quiz/main/images/IMG_3763.gif" alt="Загрузка" class="loading-gif"> <!-- Изображение (GIF) с альтернативным текстом -->
-        <div class="progress-bar"> <!-- Контейнер для прогресс-бара -->
-            <div class="progress" id="progress"></div> <!-- Элемент, отображающий прогресс -->
-        </div> <!-- Конец контейнера для прогресс-бара -->
-        <p id="status">Подготовка к загрузке</p> <!-- Текстовый элемент для отображения статуса -->
-    </div> <!-- Конец контейнера -->
-    <script src="https://telegram.org/js/telegram-web-app.js"></script> <!-- Подключение скрипта Telegram Web App -->
-    <script src="app.js"></script> <!-- Подключение пользовательского скрипта -->
-</body> <!-- Конец раздела <body> -->
-</html> <!-- Конец HTML-документа -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Земли Шаманов</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="game-container"></div>
+</body>
+</html>
