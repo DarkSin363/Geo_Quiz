@@ -4,36 +4,39 @@ const tg = window.Telegram.WebApp;
 // Расширяем приложение на весь экран
 tg.expand();
 
-// Функция для обновления прогресса
-function updateProgress(progress, statusText) {
-    const progressBar = document.getElementById('progress');
-    const status = document.getElementById('status');
+const config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    parent: 'game-container',
+    scene: {
+        preload: preload,
+        create: create
+    }
+};
 
-    // Обновляем ширину прогресс-бара
-    progressBar.style.width = `${progress}%`;
+const game = new Phaser.Game(config);
 
-    // Обновляем текст статуса
-    status.textContent = statusText;
-
-    // Обновляем статус-бар в Telegram
-    tg.showProgress(progress / 100);
+function preload() {
+    // Загрузка изображений
+    this.load.image('background', 'assets/background.png');
+    this.load.image('button', 'assets/button.png');
 }
 
-// Симуляция загрузки
-function simulateLoading() {
-    let progress = 0;
-    const interval = setInterval(() => {
-        progress += 10;
-        if (progress <= 100) {
-            updateProgress(progress, `Загрузка: ${progress}%`);
-        } else {
-            clearInterval(interval);
-            updateProgress(100, 'Загрузка завершена!');
-            // Закрываем Mini App после завершения
-            setTimeout(() => tg.close(), 2000);
-        }
-    }, 500);
-}
+function create() {
+    // Фон
+    this.add.image(400, 300, 'background');
 
-// Запуск симуляции загрузки
-simulateLoading();
+    // Кнопка "Начать игру"
+    const startButton = this.add.image(400, 400, 'button')
+        .setInteractive()
+        .on('pointerdown', () => {
+            alert('Игра началась! (Здесь будет переход в основной геймплей)');
+        });
+
+    // Текст на кнопке
+    this.add.text(400, 400, 'Начать игру', { 
+        font: '24px Arial', 
+        fill: '#ffffff' 
+    }).setOrigin(0.5);
+}
