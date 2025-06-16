@@ -18,7 +18,7 @@ const game = new Phaser.Game(config);
 
 function preload() {
     this.load.image('background', 'assets/background.png');
-    this.load.image('button', 'assets/button.png');
+    this.load.image('button', 'assets/buttonf.png');
 }
 
 function create() {
