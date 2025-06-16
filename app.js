@@ -1,15 +1,35 @@
+// Инициализация Telegram WebApp
+const tg = window.Telegram.WebApp;
+tg.expand(); // Раскрываем на весь экран
+
+// Конфиг Phaser
 const config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: window.innerWidth,
+    height: window.innerHeight,
+    parent: 'game-container',
     scene: {
+        preload: preload,
         create: create
     }
 };
+
 const game = new Phaser.Game(config);
+
+function preload() {
+    this.load.image('background', 'assets/background.png');
+    this.load.image('button', 'assets/button.png');
+}
+
 function create() {
-    this.add.text(400, 300, 'Тест работает!', { 
-        fontSize: '32px', 
-        fill: '#ffffff' 
-    }).setOrigin(0.5);
+    // Добавляем фон (на весь экран)
+    this.add.image(tg.viewportStableWidth / 2, tg.viewportStableHeight / 2, 'background')
+        .setDisplaySize(tg.viewportStableWidth, tg.viewportStableHeight);
+
+    // Кнопка с обработчиком Telegram
+    const btn = this.add.image(tg.viewportStableWidth / 2, tg.viewportStableHeight / 2, 'button')
+        .setInteractive()
+        .on('pointerdown', () => {
+            tg.sendData("Button clicked!"); // Отправляем данные в бота
+        });
 }
