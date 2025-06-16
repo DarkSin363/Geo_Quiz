@@ -1,9 +1,3 @@
-// Инициализация Telegram Web App
-const tg = window.Telegram.WebApp;
-
-// Расширяем приложение на весь экран
-tg.expand();
-
 const config = {
     type: Phaser.AUTO,
     width: 800,
